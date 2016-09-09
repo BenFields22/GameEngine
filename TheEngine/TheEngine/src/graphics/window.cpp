@@ -38,7 +38,7 @@ namespace sparky {
 				return false;
 			}
 			else
-				std::cout << "Success" << std::endl;
+				std::cout << "Successfully initialized GLFW" << std::endl;
 
 			m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
 			if (!m_Window)
@@ -47,6 +47,7 @@ namespace sparky {
 				std::cout << "Failed to create GLFW window" << std::endl;
 				return false;
 			}
+
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowUserPointer(m_Window, this);
 			glfwSetWindowSizeCallback(m_Window, window_Resize);
