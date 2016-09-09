@@ -27,6 +27,10 @@ int main()
 	*/
 	//**************************
 
+	mat4 position = mat4::translation(vec3(2, 3, 4));
+	
+	position.multiply(mat4::scale(vec3(1,2,3)));
+
 	while (!window.closed())
 	{
 
