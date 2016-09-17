@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BAB2C50A-7BB0-4CA8-AD07-5B63B195E915}</ProjectGuid>
-    <RootNamespace>TheEngine</RootNamespace>
+    <ProjectGuid>{EFD7D71A-A0B4-4712-9A15-7F88D3834E4A}</ProjectGuid>
+    <RootNamespace>binaryTest</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>TheCoreEngine</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -69,20 +68,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>glfw3.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -119,32 +111,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="src\graphics\buffers\buffer.cpp" />
-    <ClCompile Include="src\graphics\buffers\indexbuffer.cpp" />
-    <ClCompile Include="src\graphics\buffers\vertexarray.cpp" />
-    <ClCompile Include="src\graphics\shader.cpp" />
-    <ClCompile Include="src\graphics\window.cpp" />
-    <ClCompile Include="src\maths\mat4.cpp" />
-    <ClCompile Include="src\maths\vec2.cpp" />
-    <ClCompile Include="src\maths\vec3.cpp" />
-    <ClCompile Include="src\maths\vec4.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\graphics\buffers\buffer.h" />
-    <ClInclude Include="src\graphics\buffers\indexbuffer.h" />
-    <ClInclude Include="src\graphics\buffers\vertexarray.h" />
-    <ClInclude Include="src\graphics\shader.h" />
-    <ClInclude Include="src\graphics\window.h" />
-    <ClInclude Include="src\maths\mat4.h" />
-    <ClInclude Include="src\maths\maths.h" />
-    <ClInclude Include="src\maths\vec2.h" />
-    <ClInclude Include="src\maths\vec3.h" />
-    <ClInclude Include="src\maths\vec4.h" />
-    <ClInclude Include="src\utils\fileutils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\shaders\basic.frag" />
-    <None Include="src\shaders\basic.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

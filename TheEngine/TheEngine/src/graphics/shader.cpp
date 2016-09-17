@@ -37,7 +37,7 @@ namespace sparky {
 				glGetShaderiv(vertex, GL_INFO_LOG_LENGTH, &length);
 				std::vector<char> error(length);
 				glGetShaderInfoLog(vertex, length, &length, &error[0]);
-				std::cout << "Failer to compile vertex shader " <<std::endl<<&error[0] << std::endl;
+				std::cout << "Failed to compile vertex shader " <<std::endl<<&error[0] << std::endl;
 				glDeleteShader(vertex);
 				return 0;
 			}
@@ -53,7 +53,7 @@ namespace sparky {
 				glGetShaderiv(fragment, GL_INFO_LOG_LENGTH, &length);
 				std::vector<char> error(length);
 				glGetShaderInfoLog(fragment, length, &length, &error[0]);
-				std::cout << "Failer to compile fragment shader " << std::endl<< &error[0] << std::endl;
+				std::cout << "Failed to compile fragment shader " << std::endl<< &error[0] << std::endl;
 				glDeleteShader(fragment);
 				return 0;
 			}
